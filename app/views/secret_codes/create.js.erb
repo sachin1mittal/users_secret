@@ -1,0 +1,3 @@
+<% if @secret_codes.present? %>
+  $('.secret_codes tr.header').after("<%= escape_javascript(render partial: 'row', collection: @secret_codes, as: :secret) %>")
+<% end %>

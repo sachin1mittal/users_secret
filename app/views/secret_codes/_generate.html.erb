@@ -1,0 +1,8 @@
+<p>
+  <b>Generate Unique Codes</b>
+</p>
+
+<%= form_tag secret_codes_path, remote: true do %>
+  <%= select_tag(:count, options_for_select([10, 1, 2, 20, 50, 100])) %>
+  <%= submit_tag 'Generate' %>
+<% end %>

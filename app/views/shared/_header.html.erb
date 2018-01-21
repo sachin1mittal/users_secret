@@ -1,0 +1,12 @@
+<%= nav_bar fixed: :top do %>
+  <%= menu_group pull: :right do %>
+    <% if current_user %>
+      <li><%= menu_item :Home, root_path %></li>
+      <li><%= menu_item :Codes, secret_codes_path if can? :read, SecretCode %></li>
+      <li><%= menu_item :Logout, destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= menu_item :Login, new_user_session_path %></li>
+      <li><%= menu_item :Register, new_user_registration_path %></li>
+    <% end %>
+  <% end %>
+<% end %>

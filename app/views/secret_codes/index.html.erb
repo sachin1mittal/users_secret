@@ -1,0 +1,9 @@
+<table class="table secret_codes">
+  <tr class="header">
+    <th>Code</th>
+    <th>Email</th>
+  </tr>
+  <%= render partial: 'row', collection: @secret_codes, as: :secret %>
+</table>
+
+<%= render 'generate' %>
